@@ -1,0 +1,50 @@
+.portfolioContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.backgroundImage {
+  background-image: url("/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  .backgroundImage .backgroundImage {
+    background-image: url("/banner-tablette.jpg");
+  }
+}
+@media (max-width: 767px) {
+  .backgroundImage .backgroundImage {
+    background-image: url("/banner-mobile.jpg");
+  }
+}
+
+.titre {
+  padding-top: 30px;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.titre::after {
+  content: "";
+  display: inline-block;
+  width: 20%;
+  border-bottom: 5px solid #0d6efd;
+  margin-top: 10px;
+}
+.titre h2 {
+  text-transform: uppercase;
+}
+.titre p {
+  font-size: large;
+}
+
+.card {
+  width: 28%;
+}
+
+/*# sourceMappingURL=realisations.module.css.map */

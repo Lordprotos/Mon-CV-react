@@ -1,0 +1,65 @@
+.container {
+  font-size: larger;
+}
+
+.backgroundImage {
+  background-image: url("/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  .backgroundImage .backgroundImage {
+    background-image: url("/banner-tablette.jpg");
+  }
+}
+@media (max-width: 767px) {
+  .backgroundImage .backgroundImage {
+    background-image: url("/banner-mobile.jpg");
+  }
+}
+
+.titre {
+  width: 100%;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.titre::after {
+  content: "";
+  display: inline-block;
+  width: 20%;
+  border-bottom: 5px solid #0d6efd;
+  margin-top: 10px;
+}
+.titre h1 {
+  font-size: 250%;
+  text-transform: uppercase;
+}
+
+.servicesContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.column {
+  width: 320px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #0d6efd;
+  background-color: rgba(0, 91, 187, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+.column h3 {
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=service.module.css.map */

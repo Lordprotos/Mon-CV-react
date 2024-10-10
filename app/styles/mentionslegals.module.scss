@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titre {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+
+    ::after {
+        content:"";
+        display: inline-block;
+        width: 80%;
+        border-bottom: 5px solid #0d6efd;
+        margin-top: 10px;
+    }
+}
+
+.mentionsContainer {
+    width: 80%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+    p{
+        font-size: 120%;
+    }
+}

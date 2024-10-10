@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Nunito Sans";
+  font-weight: 400 600;
+  font-style: normal;
+  src: url(./styles/font/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf) format("truetype");
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  height: auto;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-weight: 600;
+  color: #1e1e1e;
+}
+body strong {
+  color: #000000;
+  font-weight: 600;
+}
+body p {
+  color: #444;
+}
+
+/*# sourceMappingURL=globals.css.map */
