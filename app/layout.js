@@ -5,14 +5,16 @@ import "./globals.css";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 export default function RootLayout({ children }) {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
+    if (typeof window !== "undefiened") {
+
+      import ('bootstrap/dist/js/bootstrap.bundle.min.js')
+
       const handleScroll = () => {
-          console.log('scrolling');
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
           setShowButton(true);
       } else {
@@ -25,11 +27,14 @@ export default function RootLayout({ children }) {
   return () => {
       window.removeEventListener('scroll', handleScroll);
   };
+  }
   }, []);
 
 
   const scrollToTop = () => {
+    if (typeof winodow !== "undefiened") {
     window.scrollTo({ top:0, behavior: 'smooth' });
+  }
   };
 
   return (

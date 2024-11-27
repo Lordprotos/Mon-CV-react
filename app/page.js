@@ -62,7 +62,7 @@ export default function Home() {
                 aria-valuenow="90"
                 aria-valuemin="0"
                 aria-valuemax="100"
-              >HTML5</div>
+              >HTML5 90%</div>
             </div>
 
             <div className="progress" style={{ marginBottom: "15px", height: "30px", fontSize: "18px" }}>
@@ -73,7 +73,7 @@ export default function Home() {
                 aria-valuenow="80"
                 aria-valuemin="0"
                 aria-valuemax="100"
-              >CSS3</div>
+              >CSS3 80%</div>
             </div>
 
             <div className="progress" style={{ marginBottom: "15px", height: "30px", fontSize: "18px" }}>
@@ -84,7 +84,7 @@ export default function Home() {
                 aria-valuenow="70"
                 aria-valuemin="0"
                 aria-valuemax="100"
-              >JavaScript</div>
+              >JavaScript 70%</div>
             </div>
 
             <div className="progress" style={{ marginBottom: "15px", height: "30px", fontSize: "18px" }}>
@@ -95,7 +95,7 @@ export default function Home() {
                 aria-valuenow="60"
                 aria-valuemin="0"
                 aria-valuemax="100"
-              >PHP</div>
+              >PHP 60%</div>
             </div>
 
             <div className="progress" style={{ marginBottom: "15px" , height: "30px", fontSize: "18px" }}>
@@ -106,7 +106,7 @@ export default function Home() {
                 aria-valuenow="60"
                 aria-valuemin="0"
                 aria-valuemax="100"
-              >React</div>
+              >React 50%</div>
             </div>
           </div>
         </div> 

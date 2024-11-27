@@ -1,6 +1,10 @@
 .portfolioContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 50px;
+  row-gap: 50px;
+  gap: 10px;
 }
 
 .backgroundImage {
@@ -19,6 +23,9 @@
 @media (max-width: 767px) {
   .backgroundImage .backgroundImage {
     background-image: url("/banner-mobile.jpg");
+  }
+  .titre {
+    text-align: center;
   }
 }
 
@@ -44,7 +51,7 @@
 }
 
 .card {
-  width: 28%;
+  width: 300px;
 }
 
 /*# sourceMappingURL=realisations.module.css.map */

@@ -1,25 +1,100 @@
-.navbarContainer {
-  background-color: #1e1e1e;
-  color: white;
+.navbar {
+  width: 100%;
+  background-color: #444;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-transform: uppercase;
   align-items: center;
-  padding: 10px;
-  height: 90px;
-}
-.navbarContainer img {
-  margin-left: 15px;
-  height: 130%;
-  width: 130%;
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.navLink.active {
-  color: #EEE !important;
-}
-.navLink:hover {
-  color: rgba(238, 238, 238, 0.8) !important;
+.navbar > .navHeader {
+  flex: 0.95;
+  padding-left: 1rem;
 }
 
-/*# sourceMappingURL=Navbar.module.css.map */
+.navbar > .navList {
+  display: flex;
+  gap: 2rem;
+  transition: all 0.3s ease-in;
+}
+
+.navbar > .navList > li {
+  list-style-type: none;
+}
+
+.navbar > .navList > li a {
+  text-decoration: none;
+  color: #1e1e1e;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 130%;
+}
+
+.navbar > .navList > li a:hover {
+  color: #EEE;
+  opacity: 0.8;
+}
+
+.navbar input {
+  display: none;
+}
+
+.navbar > .navList > li a.active {
+  color: #EEE;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar > .navBtn {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 0.2rem;
+    cursor: pointer;
+  }
+
+  .navbar > .navBtn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+
+  .navbar > .navBtn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+
+  .navbar > .navList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    background-color: #444;
+    height: 0;
+    left: 0;
+    transition: all 0.3s ease-in;
+    top: 40px;
+    overflow: hidden;
+  }
+
+  .navbar > .navList > li a:hover {
+    color: #EEE;
+    opacity: 0.8;
+  }
+
+  .navbar > .navList.open {
+    height: calc(100vh - 50px);
+  }
+
+  .navbar > .navList > li {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}

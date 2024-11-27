@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className={styles.container}>
                     {/* 1ère Colonne: Informations du développeur */}
                     <div className={styles.column}>
-                        <h4>Jhon Doe</h4>
+                        <h4>John Doe</h4>
                         <p>40 Rue Laure Diebold</p>
                         <p>69009 Lyon, France</p>
                         <p>Télephone: 06 20 30 40 50</p>
@@ -50,9 +50,9 @@ const Footer = () => {
                 {/* 4ème Colonne: Derniers articles de blog */}
                 <div className={styles.column}>
                     <h4>Derniers Articles</h4>
-                    <Link href="/blog#article1">Article 1</Link>
-                    <Link href="/blog#article2">Article 2</Link>
-                    <Link href="/blog#article3">Article 3</Link>
+                    <Link href="/blog#article1">Coder son site en HTML/CSS</Link>
+                    <Link href="/blog#article2">Vendre ses produits sur le web</Link>
+                    <Link href="/blog#article3">Se positionner sur Google</Link>
                 </div>
             </div>
 

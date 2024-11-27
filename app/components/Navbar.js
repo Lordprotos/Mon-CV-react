@@ -1,39 +1,69 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/Navbar.module.css';
-import { useEffect } from 'react'
 
 const Navbar = () => {
-    const handleLinkClick = (event) => {
-        const links = document.querySelectorAll(`.${styles.navLink}`);
-        links.forEach(link =>{
-            link.classList.remove(styles.active);
-        });
-        event.currentTarget.classList.add(styles.active);
+    const [isMenuOpen, setMenuOpen] = useState(false);
+    const [activeLink, setActiveLink] = useState(null);
+
+    const toggleMenu = () => {
+        setMenuOpen(prevState => !prevState);
     };
 
-    useEffect (() => {
-        const currentPath = window.location.pathname;
-        const links = document.querySelectorAll(`.${styles.navLink}`);
-        links.forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-                link.classList.add(styles.active);
-            }
-        });
-    }, []);
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
+
+    const handleLinkClick = (index) => {
+        setActiveLink(index);
+        closeMenu();
+    };
 
     return (
-        <div className={styles.navbarContainer}>
-            <Link href="/"><img src='/favicon.png' alt='Favicon' /></Link>
-            <nav className={`navbar ${styles.customNavbar}`}>
-                <div className="container-fluid">
-                    <Link className={`${styles.navLink} navbar-brand text-secondary`} href="/" onClick={handleLinkClick}>Accueil</Link>
-                    <Link className={`${styles.navLink} navbar-brand text-secondary`} href="/services" onClick={handleLinkClick}>Services</Link>
-                    <Link className={`${styles.navLink} navbar-brand text-secondary`} href="/realisations" onClick={handleLinkClick}>Réalisations</Link>
-                    <Link className={`${styles.navLink} navbar-brand text-secondary`} href="/blog" onClick={handleLinkClick}>Blog</Link>
-                    <Link className={`${styles.navLink} navbar-brand text-secondary`} href="/contact" onClick={handleLinkClick}>Me Contacter</Link>
+        <nav className={styles.navbar}>
+            <input type="checkbox" id="nav-check"/>
+            <div className={styles.navHeader}>
+                <div className={styles.navTitle}>
+                    <Link href="/"><img src="/favicon.png" alt="logo" ></img></Link>
                 </div>
-            </nav>
-        </div>
+            </div>
+            <div className={styles.navBtn} onClick={toggleMenu}>
+                <label htmlFor="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+                </label>
+            </div>
+            
+            <ul className={`${styles.navList} ${isMenuOpen ? styles.open : ''}`}>
+                <li>
+                    <Link className={`${styles.navLink} ${activeLink === 0 ? styles.active : ''}`}
+                    onClick={() => handleLinkClick(0)}
+                    href="/">Accueil</Link>
+                </li>
+                
+                <li>
+                    <Link className={`${styles.navLink} ${activeLink === 1 ? styles.active : ''}`}
+                    onClick={() => handleLinkClick(1)}
+                    href="/services" >Services</Link>
+                    </li>
+                <li>
+                    <Link className={`${styles.navLink} ${activeLink === 2 ? styles.active : ''}`}
+                    onClick={() => handleLinkClick(2)}
+                    href="/realisations" >Réalisations</Link>
+                </li>
+                <li>
+                    <Link className={`${styles.navLink} ${activeLink === 3 ? styles.active : ''}`}
+                    onClick={() => handleLinkClick(3)}
+                    href="/blog" >Blog</Link>
+                </li>
+                <li>
+                    <Link className={`${styles.navLink} ${activeLink === 4 ? styles.active : ''}`}
+                    onClick={() => handleLinkClick(4)}
+                    href="/contact" >Me Contacter</Link>
+                </li>
+            </ul>
+        </nav>
     );
 };
 

@@ -12,9 +12,22 @@
     background-image: url("/banner-tablette.jpg");
   }
 }
+
 @media (max-width: 767px) {
   .backgroundImage {
     background-image: url("/banner-mobile.jpg");
+  }
+  .card {
+    flex-basis: calc(50% - 10px);
+  }
+  .titre {
+    text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .card {
+    flex-basis: calc(100% - 10px);
   }
 }
 .titre {
@@ -44,10 +57,11 @@
 
 .blogContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 20px;
   row-gap: 20px;
 }
 
