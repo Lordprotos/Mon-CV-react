@@ -40,6 +40,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <title>Mon site web</title>
       </head>
       <body className="body">
         <Navbar />
