@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
 
 
   const scrollToTop = () => {
-    if (typeof winodow !== "undefiened") {
+    if (typeof window !== "undefined") {
     window.scrollTo({ top:0, behavior: 'smooth' });
   }
   };
@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
                             color:'#EEE',
                             border:'none',
                             padding:'15px',
-                            barderRadius:'5px',
+                            borderRadius:'5px',
                             cursor:'pointer',
                             zIndex:'100'
                         }}
